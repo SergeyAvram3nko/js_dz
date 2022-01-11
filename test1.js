@@ -1,1 +1,0 @@
-let gitGovnoEbanoe = "yes";
