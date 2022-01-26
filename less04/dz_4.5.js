@@ -34,4 +34,5 @@ function reduce(arr, f, acc){
     return acc;
 }
 
+
 console.log(reduce(arr,(sum, current) => sum + current, acc));
