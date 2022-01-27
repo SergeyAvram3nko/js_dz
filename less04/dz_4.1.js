@@ -13,7 +13,7 @@ const arr = [1,2,3];
 forEach(arr, function(item, i, arr) {});
 ```
  */
-
+const arr = [1,2,3];
 function forEach(arr, f){
     if(!Array.isArray(arr)){
         console.log(arr)
@@ -25,14 +25,14 @@ function forEach(arr, f){
     for(let j = 0; j < arr.length; j++){
         f(arr[j], j, arr);
     }
-    return arr;
 }
-
-console.log(forEach([1,2,3], function (item, i, arr){
+forEach(arr, function (item, i, arr){
     arr[i] = String(arr[i]);
-}));
+})
+console.log(arr);
 
 forEach([1,2,3], function(item, i, arr){
-    console.log(item);
+   console.log(item);
 });
+
 
