@@ -21,7 +21,11 @@ function arrayFill(elemArr, countArr){
                 return false;
             }
             else{
-                return true;
+                if(Array.isArray(elemArr)){
+                    return true;
+                }else{
+                    return false
+                }
             }
         }
         if(typeof(elemArr) === "number"){
@@ -46,5 +50,5 @@ function arrayFill(elemArr, countArr){
 
     return new Array(countArr).fill(elemArr);
 }
-console.log(arrayFill([1,2], 5));
+console.log(arrayFill(new Set(["s"]), 5));
 
