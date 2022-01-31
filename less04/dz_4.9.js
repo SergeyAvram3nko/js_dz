@@ -16,16 +16,15 @@ arrayFill('x',5); // [x,x,x,x,x]
  */
 function arrayFill(elemArr, countArr){
     function checkElemArr (elemArr){
+        if(Array.isArray(elemArr)){
+            return true;
+        }
         if(typeof(elemArr) === "object"){
             if(elemArr === null){
                 return false;
             }
             else{
-                if(Array.isArray(elemArr)){
-                    return true;
-                }else{
-                    return false
-                }
+                return true;
             }
         }
         if(typeof(elemArr) === "number"){
@@ -50,5 +49,5 @@ function arrayFill(elemArr, countArr){
 
     return new Array(countArr).fill(elemArr);
 }
-console.log(arrayFill(new Set(["s"]), 5));
+console.log(arrayFill("3", 5));
 
